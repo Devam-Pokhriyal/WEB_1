@@ -10,7 +10,7 @@ interface NavItem {
   icon: React.ReactNode;
 }
 
-const Navbar = (): JSX.Element => {
+const Navbar = ():  React.ReactElement => {
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);

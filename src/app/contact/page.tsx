@@ -35,7 +35,7 @@ interface VisibilityState {
   [key: string]: boolean;
 }
 
-const Contact = (): JSX.Element => {
+const Contact = ():  React.ReactElement => {
   const [isVisible, setIsVisible] = useState<VisibilityState>({});
   const [formData, setFormData] = useState<FormData>({
     name: '',

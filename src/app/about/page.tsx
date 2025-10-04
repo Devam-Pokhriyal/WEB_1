@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Target, Eye, Heart, Users, Award, TrendingUp, Globe, Shield, Zap, CheckCircle, ArrowRight, MapPin, Calendar, Mail, Phone } from 'lucide-react';
+import { Target, Eye, Heart, Users, Award, TrendingUp, Globe, Shield, Zap, CheckCircle, ArrowRight, Calendar, Mail } from 'lucide-react';
 
 interface TeamMember {
   name: string;
@@ -35,7 +35,7 @@ interface VisibilityState {
   [key: string]: boolean;
 }
 
-const About = (): JSX.Element => {
+const About = ():  React.ReactElement => {
   const [isVisible, setIsVisible] = useState<VisibilityState>({});
   const [activeTab, setActiveTab] = useState<'story' | 'team' | 'timeline'>('story');
 

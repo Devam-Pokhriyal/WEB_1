@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "preserve", // or "react" for older versions
+    "jsx": "preserve", // enables new JSX transform
     "target": "ES2017",
     "lib": [
       "dom",
@@ -26,7 +26,10 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": [
+      "react"
+    ] // <--- add this line
   },
   "include": [
     "next-env.d.ts",

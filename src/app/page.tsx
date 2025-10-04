@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ChevronRight, Star, Users, Shield, Zap, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { ChevronRight, Star, Users, Shield, Zap, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 interface Partner {
   name: string;
@@ -26,7 +26,7 @@ interface VisibilityState {
   [key: string]: boolean;
 }
 
-export default function Home(): JSX.Element {
+export default function Home():  React.ReactElement {
   const [currentTestimonial, setCurrentTestimonial] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<VisibilityState>({});
 
@@ -349,13 +349,10 @@ export default function Home(): JSX.Element {
                   <span className="text-gray-600">hello@company.com</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-gray-400" />
+                 
                   <span className="text-gray-600">+1 (555) 123-4567</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-gray-400" />
-                  <span className="text-gray-600">New York, NY 10001</span>
-                </div>
+                
               </div>
             </div>
           </div>
