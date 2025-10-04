@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle, Globe, MessageSquare, Users, Calendar } from 'lucide-react';
+import { Mail, Clock, Send, CheckCircle, AlertCircle, Globe, MessageSquare, Users, Calendar } from 'lucide-react';
 
 interface ContactInfo {
   icon: React.ReactNode;
@@ -50,24 +50,14 @@ const Contact = (): JSX.Element => {
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
   const contactInfo: ContactInfo[] = [
-    {
-      icon: <Phone className="w-8 h-8" />,
-      title: 'Call Us',
-      details: ['+1 (555) 123-4567', '+1 (555) 765-4321'],
-      color: 'from-blue-500 to-cyan-500'
-    },
+   
     {
       icon: <Mail className="w-8 h-8" />,
       title: 'Email Us',
       details: ['hello@company.com', 'support@company.com'],
       color: 'from-green-500 to-emerald-500'
     },
-    {
-      icon: <MapPin className="w-8 h-8" />,
-      title: 'Visit Us',
-      details: ['123 Business Ave', 'New York, NY 10001'],
-      color: 'from-purple-500 to-pink-500'
-    },
+    
     {
       icon: <Clock className="w-8 h-8" />,
       title: 'Business Hours',
@@ -474,10 +464,7 @@ const Contact = (): JSX.Element => {
                 <div className="mt-8 p-6 bg-gray-50 rounded-xl">
                   <h4 className="font-semibold text-gray-900 mb-3">Prefer to call?</h4>
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Phone className="w-4 h-4 text-blue-600" />
-                      <span className="text-gray-700">+1 (555) 123-4567</span>
-                    </div>
+                    
                     <div className="flex items-center gap-2">
                       <Clock className="w-4 h-4 text-green-600" />
                       <span className="text-gray-600 text-sm">Mon-Fri: 9:00 AM - 6:00 PM EST</span>
@@ -513,14 +500,8 @@ const Contact = (): JSX.Element => {
                   <h3 className="text-2xl font-bold text-gray-900">{office.city}</h3>
                 </div>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-gray-400 mt-1" />
-                    <span className="text-gray-600">{office.address}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-600">{office.phone}</span>
-                  </div>
+                  
+                  
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-gray-400" />
                     <span className="text-gray-600">{office.email}</span>
